@@ -1,0 +1,85 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+.stats-page {
+    background-color: #0f1923;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #eaeaea;
+    padding: 40px;
+    min-height: 100vh;
+}
+
+/* Container for the stats */
+.container {
+    max-width: 700px;
+    margin: auto;
+    background-color: #1c232f;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #2c3440;
+}
+
+/* Player name */
+.player-name {
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #ff4655;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* Card styling for stat blocks */
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+/* Each stat block */
+.card div {
+    background-color: #262f3f;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #353f50;
+    transition: transform 0.2s ease;
+}
+
+.card div:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #9da8b7;
+}
+
+.card p {
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: 12px 30px;
+    background-color: #ff4655;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e13a4d;
+}

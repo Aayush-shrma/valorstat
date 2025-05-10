@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Valorant Stats</title>
+    <link rel="stylesheet" href="/static/style1.css">
+</head>
+<body class="stats-page">
+    <div class="container">
+        <h1 class="player-name">{{ data['data']['name'] }}#{{ data['data']['tag'] }}</h1>
+        <div class="card">
+            <div>
+                <h2>Rank Icon</h2>
+                <img src="{{ data['data']['images']['small'] }}" alt="Rank Icon" style="width:60px;">
+            </div>
+            
+            <div>
+                <h2>MMR Change (Last Game)</h2>
+                <p>{{ data['data']['mmr_change_to_last_game'] }}</p>
+            </div>
+            
+            <h2>Current Rank</h2>
+            <p class="rank">{{ data['data']['currenttierpatched'] }}</p>
+
+            <h2>Elo</h2>
+            <p class="elo">{{ data['data']['elo'] }}</p>
+
+            <h2>Ranking in Tier</h2>
+            <p class="tier-rank">{{ data['data']['ranking_in_tier'] }}</p>
+        </div>
+        <a href="/" class="btn">Search Again</a>
+    </div>
+</body>
+</html>

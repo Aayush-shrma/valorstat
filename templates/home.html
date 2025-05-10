@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Valorstat</title>
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h1>Welcome to Valorstat</h1>
-    <p>This is where your stats will go.</p>
+    <h1>Leaderboard</h1>
+    <ul>
+        {% for player in leaderboard %}
+        <li>{{ player['name'] }}#{{ player['tag'] }} - Elo: {{ player['elo'] }}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>

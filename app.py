@@ -1,18 +1,12 @@
-from flask import Flask, render_template
-from pymongo import MongoClient
+from flask import Flask
+from routes.stats import stats_bp
+from routes.leaderboard import leaderboard_bp
 
 app = Flask(__name__)
 
-client = MongoClient("mongodb+srv://aayushsh8888:9139@aayush.hqzcf.mongodb.net/valorstat?retryWrites=true&w=majority")
-db = client['valorstat']
-players_collection = db['players']
-
-@app.route('/')
-def home():
-    if players_collection.count_documents({}) == 0:
-        players_collection.insert_one({"player_name": "TestPlayer", "score": 100})
-
-    return render_template('home.html')
+# Register Blueprints
+app.register_blueprint(stats_bp)
+app.register_blueprint(leaderboard_bp)
 
 if __name__ == '__main__':
     app.run(debug=True)
